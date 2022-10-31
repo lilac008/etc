@@ -1,0 +1,79 @@
+[1. 2021version, 3D(URL)로 new project (ex)0802_VR2021_3D_url) 생성]
+
+1.
+pacakage manager - unity registry
+- input system 	 	 /install - yes
+- xr plugin management	 / install
+- oculus xr plugin		 / install
+
+2.
+add package from git url
+- com.unity.xr.interaction.toolkit 	/ install - go ahead
+
+3.
+edit - project setting
+- player - resolution - run in Background  V
+- XR plug-in management - destop/android  occulus V 
+
+4.
+window - packages management - XR interaction toolkit  - samples 둘다 import
+
+5.
+Assets 폴더 - XR Interaction Toolkit 폴더 - Starter Asset 폴더 - XRI Default input actions - ?
+						     - XRI Default 다섯개 전부 Add to ActionBased --- 추가
+6.
+Edit - Project Setting - Preset Manager - ActionBasedController Right/Left에 각각 Right/Left라고 씀
+
+7. 
+File - build Setting - android - switch
+Player Settings - Player - Other settings - Rendering - Auto Grapics Api  V
+				   - Identification - Minimup Api Level - Android level 10.0(API level 29)으로 설정
+
+8. Hierachy
+XR - XR Origin
+
+
+9.
+Assets 폴더 - XR Interaction Toolkit 폴더 - XR Device Simulator 폴더 - XR Device Simulator를 Hierarchy에 끌어다놓음(VR연동시 비활성화)
+
+10. Hierachy
+Input Action Manager(빈 obj생성) - Add component로 Input Action Manager script추가 - Input action manager script에 XRI Default Input Actions(Starter Assets 폴더) 드래그. 
+
+Model(빈 obj생성) - cube/sphere(3D obj 생성, 각각 collider 삭제)
+ 
+prefab에 model추가, xr origin의 r/l hand script에 model prefab
+
+생략
+
+11.
+XR Origin / camera offset - (우클릭 XR - direct interactior) select preset left - model prefab삽입
+								xr direct interactor script - hide controller on set   V
+
+12. 
+XR - Grab Interactorble
+tmp import 놓침
+
+
+
+
+
+
+
+
+*****************************************************
+
+[2. 2019version, 3D로 new project (ex)0802_VR2019_3D) 생성]
+
+1.
+pacakage manager - unity registry 
+- input system 		 /install - yes
+- Universal RP		 /install
+- xr plugin management	 / install
+- xr interaction Toolkit	 / install
+- oculus xr plugin		 / install
+
+
+2.
+우클릭 - create - rendering - universal render pipeline - pipelineAsset(forward renderer)
+edit project setting - graphics - pipelineAsset눌러서 생겨난 것 2개 중 한 개 끌어다 놓음
+

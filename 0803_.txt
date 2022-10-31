@@ -1,0 +1,51 @@
+[준비 : 어제(0802) 만든 VR2021_3D(url)에서 new scene 생성]
+01 Pakages 설치(강사님 구글드라이브_0803)
+하이러키에 Canvas simulator guide
+
+02 Inspector
+Layer Setting 설정
+
+03 edit - Project Setting
+Physics 설정
+XR interaction toolkit 설정
+
+04 Pakages Prefab 추가
+Environments(빈obj) 
+- Global Volume 
+- Environment
+- Map
+- Moon
+
+05 window - rendering - lighting - environment - skybox two colors 추가
+
+06 하이러키
+XR Origin - Camera Offset - (우클릭-XR-Direct Interactor추가-Left/Right Direct Interactor 이름변경)
+XR Origin - Camera Offset -Left/Right Direct Interactor - XR Controller script에 기호(select preset) 선택 후 Right/Left Controller 설정
+XR Origin - Camera Offset -Left/Right Direct Interactor - Layer : Direct Interactor설정
+
+07 하이러키
+System(빈 obj) 하위 연결
+- Input Action Manager - Input Action Manager script - XRI Default Input Actions(Starter Assets폴더)
+- XR Device Simulator
+- Canvas - Simulator Guide
+- XR Interaction Manager
+
+08 하이러키
+Jack o lantern(빈 obj) - Model(빈 obj, layer를 Mob으로) -  폴더에서 Jack o lantern Body/Hole/Tab 추가 - prefab에 추가 
+Jack o lantern Prefab에 Nav Mesh Agent 추가 및 설정, Mob script 추가
+
+09
+window - ai - navigation - bake
+- Agent Radius 설정
+- Agent Height 설정
+- Step Height 설정
+
+10
+Spawners(빈 obj)
+- Spawner (Spawner script 추가 - script에 Jack o lantern prefab 연결)
+- Spawner
+
+
+
+
+
