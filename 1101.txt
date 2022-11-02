@@ -1,0 +1,48 @@
+
+
+
+
+1101_Server Main
+
+1. Main Camera
+- clear flag : solid color
+- background : 회색, RGBA 중 A:255
+
+
+2. 
+Build Setting - Player Setting - Player - Resolution and Presentation - Resolution - Fullscreen Mode - Windowed : 1024 x 768
+Game - Free Aspect : 1024 x 768
+(- mac retina support  )
+(- run in background 화면이 숨겨졌을 때에도 실행하겠다)
+
+
+3. IPManager Script 다운
+
+
+4. 서버 만들기 
+하이러키
+client_Main
+Canvas	- Panel
+	- Mes_Win
+	- InputField (Legacy)
+Canvas_Ctrl
+
+----------------------------------------------------------------------------------------------------------------------------
+ClientMain script
+
+
+----------------------------------------------------------------------------------------------------------------------------
+
+1101_Client Main
+
+1. Build Setting - Player Setting - Player - Resolution and Presentation - Resolution - Fullscreen Mode - Windowed : 800 x 600
+
+Game - Free Aspect : 800 x 600
+
+
+main camera 
+clear flag :solid color 
+
+
+
+
