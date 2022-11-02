@@ -1,48 +1,84 @@
+22.11.01 
+# TCP 서버 만들기
+
+TCP (Transmission Control Protocol)
+- 현 인터넷에서 사용되는 통신 프로토콜의 표준으로 서로 기종이 다른 컴퓨터 시스템 간의 데이터 전송을 위해 개발된 통신 프로토콜
+- 군사 및 연구 목적 -> 인터넷(World Wide Web), 게임서버
+
+- 1) 연결형 Socket. 양방향 통신.  
+- 2) 발신지와 수신지를 연결하여 packet을 전송하기 위한 논리적 경로를 배정 (data를 packet조각으로 나누고 순서에 맞게 받았는지 호출해서 확인) 
+- 3) 송신된 순서에 따라 중복되지 않게 데이터 수신 
+- 4) 데이터 신뢰성, 정확도 높으나 UDP에 비해 속도가 느림 (CPU 소모 등) 
+- 5) overhead(처리하는데 들어가는 시간, 메모리 초과된 것) 발생 : 순서에 따라 중복되지 않도록 protocol로 만들어놓고 protocol이 꽉 차면 더 이상 못 보내고 대기상태가 됨    ex) 유튜브 화상카메라 화면깨짐 / 오버헤드 = 대기상태 = 화면깨짐) 
+- 6) 데이터 크기 무제한
 
 
 
-
-1101_Server Main
-
-1. Main Camera
-- clear flag : solid color
-- background : 회색, RGBA 중 A:255
+----------------------------------------------------------------------------------------------------------------------------
+[1101_Server Main]
 
 
-2. 
-Build Setting - Player Setting - Player - Resolution and Presentation - Resolution - Fullscreen Mode - Windowed : 1024 x 768
-Game - Free Aspect : 1024 x 768
+1. 환경설정
+1) Build Setting - Player Setting - Player - Resolution and Presentation - Resolution - Fullscreen Mode - Windowed : 1024 x 768
 (- mac retina support  )
 (- run in background 화면이 숨겨졌을 때에도 실행하겠다)
 
+2) Game - Free Aspect : 1024 x 768
 
-3. IPManager Script 다운
 
 
-4. 서버 만들기 
-하이러키
-client_Main
-Canvas	- Panel
-	- Mes_Win
-	- InputField (Legacy)
-Canvas_Ctrl
+2. 하이러키
+Main Camera  - clear flags (여백을 어떻게 처리할건지) - skybox(하늘)
+					        - soild color(단일 색상) 	V
+				  	        - Depth only(투명배경)
+				  	        - Don't clear (이전 프레임을 지우지 않음 ->잔상이 남음)
+	       - background  -  Color : 회색  
+	      		  -  RGBA 중 A : 255
+
+
+3. IPManager Script 다운로드  (ServerMain Script에 필수)
+
+
+4. server_Main (빈obj)  -  ServerMain Script 생성 후 연결
+
+
+5. 하이러키 
+Canvas	-  IP_Port (Text)
+	-  ConCount (Text)
+	-  Server_Message (Text)
+	-  Panel
+
+
+
 
 ----------------------------------------------------------------------------------------------------------------------------
-ClientMain script
+[1101_Client Main]
 
 
-----------------------------------------------------------------------------------------------------------------------------
+1. 환경설정
+1) Build Setting - Player Setting - Player - Resolution and Presentation - Resolution - Fullscreen Mode - Windowed : 800 x 600
+(- mac retina support  )
+(- run in background 화면이 숨겨졌을 때에도 실행하겠다)
 
-1101_Client Main
-
-1. Build Setting - Player Setting - Player - Resolution and Presentation - Resolution - Fullscreen Mode - Windowed : 800 x 600
-
-Game - Free Aspect : 800 x 600
-
-
-main camera 
-clear flag :solid color 
+2) Game - Free Aspect : 800 x 600
 
 
+2. 하이러키
+Main Camera  - clear flags (여백을 어떻게 처리할건지) - skybox(하늘)
+					        - soild color(단일 색상) 	V
+				  	        - Depth only(투명배경)
+				  	        - Don't clear (이전 프레임을 지우지 않음 ->잔상이 남음)
+	       - background  -  Color : 회색  
+	      		  -  RGBA 중 A : 255
+
+
+
+
+3. 하이러키
+client_Main (빈obj)  -  ServerMain Script 생성 후 연결
+canvas_Control
+Canvas	-  Panel
+	-  MesWin
+	-  InputField (Legacy)
 
 
