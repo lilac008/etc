@@ -1,0 +1,6 @@
+
+URP
+
+global volume - bloom - intensity 조정하면
+
+emission 걸어놓은 것들(따로따로 가능)이 전체적으로 밝아짐

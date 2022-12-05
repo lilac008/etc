@@ -1,0 +1,7 @@
+
+확장자 - 실행가능 프로그램
+
+.fbx         : blender, unity 등
+.svg        : Illustrator, unity
+.blender   : blender, unity 
+
